@@ -1,0 +1,86 @@
+.f-btn {
+  margin-top: 3vw;
+  display: inline-block;
+  border: 1px solid $mc;
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  height: 3.4vw;
+  padding: 0 1.5vw;
+  line-height: 3.4vw;
+  color: $mc;
+  -webkit-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    color: $mc;
+    font-size: 0.9vw;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transform-origin: right center;
+    -ms-transform-origin: right center;
+    transform-origin: right center;
+    background: $mc;
+  }
+  &:after {
+    content: "";
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: -webkit-transform 0.9s cubic-bezier(0.84, -0.01, 0.48, 0.995);
+    transition: -webkit-transform 0.9s cubic-bezier(0.84, -0.01, 0.48, 0.995);
+    transition: transform 0.9s cubic-bezier(0.84, -0.01, 0.48, 0.995);
+    transition: transform 0.9s cubic-bezier(0.84, -0.01, 0.48, 0.995),
+      -webkit-transform 0.9s cubic-bezier(0.84, -0.01, 0.48, 0.995);
+    left: -0.25rem;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    top: -0.25rem;
+    position: absolute;
+    -webkit-transform-origin: top right;
+    -ms-transform-origin: top right;
+    transform-origin: top right;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    z-index: 3;
+  }
+  &:hover {
+    &:before {
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1);
+      -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+      transform-origin: left center;
+    }
+    span {
+      color: white;
+    }
+  }
+}
+
+
+//      thumbnailWidth: 200,
+//thumbnailHeight: 120,

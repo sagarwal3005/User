@@ -1,0 +1,30 @@
+.cookies{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1vw;
+    z-index: 999;
+    // display: none;
+    &_inner{
+        background-color: $mc;
+        display: flex;
+        align-items: center;
+        padding: 1vw;
+        justify-content: space-between;
+        color: white;
+        a{
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+    .btn{
+        color: white;
+        border:1px solid white;
+        background-color: transparent;
+        font-size: 1vw;
+        padding: 0.3vw 1vw;
+        border-radius: 0;
+    }
+}
+

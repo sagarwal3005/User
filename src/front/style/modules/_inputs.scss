@@ -1,0 +1,12 @@
+.input {
+  border-radius: 45px;
+  width: 100%;
+  height: 35px;
+  border: 1px solid $white;
+  padding: 10px;
+  box-shadow: none;
+  outline: none;
+  &--purple {
+    background-color: $darkPurple;
+  }
+}

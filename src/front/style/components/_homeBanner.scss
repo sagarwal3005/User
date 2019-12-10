@@ -1,0 +1,83 @@
+.main-banner {
+  height: 68vh;
+  position: relative;
+  .inner {
+    margin: auto;
+  }
+  .banner_holder {
+    height: 0;
+  }
+  .home-banner_main {
+    width: 38vw;
+    height: 20vw;
+    margin: auto;
+  }
+  .banner {
+    .h1 {
+      span{
+        transition-delay: 0.5s;
+        -webkit-transition-delay: 0.5s;
+      }
+    }
+    &_main {
+      .parallax-outer {
+        span {
+          //mix-blend-mode: color-dodge;
+          color: $dark-gray;
+      
+        }
+      }
+      &:after {
+        // background-image: url("../assets/fyi-home-banner.jpg");
+        // background-position: center 32%;
+        // content: "";
+        // position: absolute;
+        // left: 0;
+        // right: 0;
+        // top: 0;
+        // bottom: 0;
+        background-color: transparent;
+        // transform: translateY(101%);
+        // -webkit-transform: translateY(101%);
+        // transition-delay: 1.5s;
+        -webkit-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+    }
+  }
+  .h1 {
+    span {
+      color: $mc;
+    }
+  }
+}
+
+.addAnimation {
+  // overflow: hidden;
+  .home-banner {
+    .banner_main {
+      &:after {
+        transform: translateY(0);
+        -webkit-transform:translateY(0);
+      }
+    }
+    &:before {
+      transform: translateY(0);
+      -webkit-transform:translateY(0);
+    }
+  }
+}
+
+.main-page_socials{
+  position: fixed;
+  right: 5vw;  
+  bottom: 2vw;
+  flex-direction: column;
+  z-index: 9;
+  li{
+    padding-top: 1.5vw;
+    a{
+      padding: 0;
+    }
+  }
+}

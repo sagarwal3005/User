@@ -1,0 +1,24 @@
+{
+    "Name": "Microblading - Everything You Need To Know About The Semi-Permanent Eyebrow Treatment",
+    "category": {
+        "Name": "Beauty",
+        "Id": "123123123123",
+        "parentId": "123123dasdfasdf123123",
+        "parents": [
+            {
+                "Name": "Lifestyle",
+                "Id": "123123123123",
+                "parentId": "123123dasdfasdf123123"
+            }
+        ]
+    },
+    "tag": [
+        "beauty",
+        "lifestyle",
+        "feedYourImage",
+        "Eyebrow",
+        "Microblading"
+    ],
+    "date": "asdasdasd",
+    "status": "asdasds"
+}

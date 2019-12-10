@@ -1,0 +1,97 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &_parent {
+    width: 100%;
+    position: relative;
+  }
+  &_holder {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+  }
+  &_container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+  }
+  &_main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      background-color: $mc;
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+      -webkit-transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    }
+  }
+  .h1 {
+    overflow: hidden;
+    opacity: 0;
+    transition-delay: 2s;
+    -webkit-transition-delay: 2s;
+    transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear;
+    span {
+      font-size: 5vw;
+      text-transform: uppercase;
+      line-height: 0.8;
+      display: block;
+      opacity: 0;
+      transform: matrix(1, -0.1, 0.1, 1, 0, 130);
+      -webkit-transform: matrix(1, -0.1, 0.1, 1, 0, 130);
+      transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+      transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+      transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+      transition-delay: 3s;
+      -webkit-transition-delay: 3s;
+    }
+  }
+}
+
+.addAnimation {
+  .banner_holder {
+    width: 45vw;
+    height: 25vw;
+    margin: 8vw auto 2vw auto;
+  }
+  .h1 {
+    opacity: 1;
+    span {
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+      opacity: 1;
+    }
+  }
+  .banner_main:after {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    background-position: center;
+  }
+}
+
+.services .home-banner .banner_main:after {
+  background-position: center 20%;
+}

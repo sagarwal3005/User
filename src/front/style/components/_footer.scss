@@ -1,0 +1,27 @@
+.footer{
+  background-color: $footer-gray;
+  font-size: 0.8vw;
+  position: relative;
+  z-index: 10;
+  .logo{
+    font-weight: $bold;
+    text-transform: uppercase;
+    color: $dark-gray;
+    letter-spacing: 2px;  
+  }
+  a{
+    color: $dark-gray;
+    &:hover{
+      color: $mc;
+    }
+  }
+  li{
+    a{
+      display: block;
+      line-height: 2.3;
+    }
+  }
+  &_social a{
+    padding-right: 16px;
+  }
+}

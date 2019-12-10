@@ -1,0 +1,33 @@
+@import "bootstrap/scss/bootstrap.scss";
+
+@import "./modules/vars";
+@import "./modules/typography";
+@import "./modules/normalize";
+@import "./modules/container.scss";
+
+@import "./modules/buttons";
+
+@import "./components/body";
+@import "./components/menu";
+@import "./components/header";
+@import "./components/tabs";
+@import "./components/aos";
+@import "./components/footer";
+@import "./components/breadcrumb";
+@import "./components/banner";
+@import "./components/homeBanner";
+@import "./components/latest";
+@import "./components/upcomingEvent";
+@import "./components/about";
+@import "./components/post";
+@import "./components/article";
+@import "./components/services";
+@import "./components/cookies";
+@import "./components/contact";
+@import "./components/form";
+@import "./components/influencers";
+@import "./components/event";
+@import "./components/loading";
+@import "./components/carousel";
+
+@import "./modules/breakpoints.scss";

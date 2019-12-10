@@ -1,0 +1,12 @@
+.slick-list{
+    cursor: grab;
+    cursor: -webkit-grab;
+    margin-left: -10px!important;
+    margin-right: -10px!important;
+}
+
+.gallery-row{
+    @extend .row;
+    margin-left: -3px;
+    margin-right:-3px;
+}

@@ -1,0 +1,36 @@
+.f-breadcrumb {
+  position: fixed;
+  left: 0;
+  top:8vw;
+  height: 35vw;
+  width:5vw;
+  z-index: 9999999;
+  &_inner{
+    font-size: 1vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 3.5vw;
+    float: left;
+  }
+  .rotate {
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+    width: 35vw;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-start;  
+    li {
+      padding:0 5px 0 0;
+      &.text-truncate{
+        max-width: 30vw;
+        padding-right: 0;
+      }
+    }
+  }
+}

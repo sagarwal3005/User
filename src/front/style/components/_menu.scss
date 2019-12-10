@@ -1,0 +1,166 @@
+$bar-width: 2.24vw;
+$bar-height: 0.24vw;
+$bar-spacing: 0.24vw;
+
+.menu {
+	position:fixed;
+	top:0;
+	right:0;
+  bottom:0;
+  z-index: 99999;
+  a{
+    font-weight: $bold;
+    letter-spacing: .12em;
+    color:$white;
+    opacity: 0.8;
+    text-transform: uppercase;
+    position: relative;
+    transition: color linear 0.4s,font-size linear 0.1s ;
+  }
+  &_main{
+    a{
+      padding-bottom: 1vw;
+      padding-top:1vw;
+      display: block;
+      transform-origin: 0 0;
+      -webkit-transition: letter-spacing .8s cubic-bezier(.77,0,.175,1);
+      transition: letter-spacing .8s cubic-bezier(.77,0,.175,1);
+      &:hover{
+        letter-spacing: .4em;
+      }
+    }
+    &_item{
+      overflow: hidden;
+      div {
+        position: relative;
+        opacity: 0;
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        transition: transform .7s cubic-bezier(.33,.69,.37,1.01),opacity .7s cubic-bezier(.33,.69,.37,1.01);
+        will-change: transform;
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background-color: #1d2a32;
+          -ms-transform: scaleX(0);
+          transform: scaleX(0);
+          -ms-transform-origin: left;
+          transform-origin: left;
+          transition: transform .38s cubic-bezier(.72,0,.28,1.01);
+        }
+      }        
+    }
+    li:first-of-type .menu_main_item div {
+      transition-delay: .33333s;
+    } 
+    li:nth-of-type(2) .menu_main_item div {
+      transition-delay: .36667s;
+    }
+    li:nth-of-type(3) .menu_main_item div {
+      transition-delay: .4s;
+    }
+    li:nth-of-type(4) .menu_main_item div {
+      transition-delay: .43333s;
+    }
+    li:nth-of-type(5) .menu_main_item div {
+      transition-delay: .46667s;
+    }
+  }
+ 
+  &_soical{
+    position: absolute;
+    bottom: 15px;
+    a{
+      padding-right: 16px;
+    }
+    p{
+      color: #ffffff96;
+      font-size: 0.8vw;
+      padding-top: 10px;
+    }
+  }
+  &--items {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -30vw;
+    z-index: 9999;
+    background-color: #222222;
+    padding: 4vw;
+    width: 30vw;
+    height: 100vh;
+    transition: 0.5s ease;
+    &.opened {
+      right: 0;
+    }
+  }
+  .menu-wrapper {
+    position: fixed;
+    top: 0.8vw;
+    right: 5vw;
+    padding: 0 0 0 2vw;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    display:block;
+    height:3vw;
+    width: 4.3vw;
+    &:focus {
+      border: none;
+    }
+  }
+  #menu:after,
+  #menu:before {
+    width: $bar-width;
+    height: $bar-height;
+  }
+  #menu {
+    position: relative;
+    transform: translateY(0);
+    transition: all 0ms 300ms;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -0.5vw;
+      background: $mc;
+      transition: top 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86), transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.3vw;
+      background: $mc;
+      transition: top 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86), transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+    &.animate {
+      background: rgba(255, 255, 255, 0);
+      &:after {
+        top: 0;
+        background-color: $white;
+        transform: rotate(45deg);
+        // transition: top 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86), transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      }
+      &:before {
+        top: 0;
+        background-color: $white;
+        transform: rotate(-45deg);
+        // transition: bottom 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86), transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      }
+      .menu{
+        &_main_item div{
+          opacity: 1;
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+          transition: transform .7s cubic-bezier(.33,.69,.37,1.01),opacity .7s cubic-bezier(.33,.69,.37,1.01);
+          will-change: transform;
+        }
+      }
+    }    
+  }
+}

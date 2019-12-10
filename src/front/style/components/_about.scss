@@ -1,0 +1,17 @@
+.about {
+  position: relative;
+  color:$mc;
+  line-height:1.8;
+  padding-bottom: 5vw;
+  margin-top: 10vw;
+  p{
+    text-align: justify;
+    a{
+      color: $mc;
+      text-decoration: underline;
+    }
+  }
+  .regular{
+    line-height:1.6;
+  }
+}

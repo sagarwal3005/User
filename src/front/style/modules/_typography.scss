@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,900");
+
+$regular: 600;
+$bold: 900;
+
+.m-color {
+  color: $mc;
+  &:hover {
+    color: $mc;
+  }
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.small {
+  font-size: 1vw;
+}
+
+.regular {
+  font-weight: $regular;
+}
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.h1,
+.h3,
+.h4 {
+  font-weight: $bold;
+}
+
+.h1 {
+  font-size: 5vw;
+  text-transform: uppercase;
+}
+.h3 {
+  font-size: 4vw;
+}
+.h4 {
+  font-size: 2vw;
+}
+.h5 {
+  font-size: 1.6vw;
+}
+.side-title {
+  position: relative;
+}
+
+.vertical-text {
+  font-size: 2.3vw;
+  font-weight: $bold;
+  top: 2vw;
+  text-transform: uppercase;
+  position: sticky;
+  position: -webkit-sticky;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-align: right;
+  transform-origin: bottom right;
+  display: inline-block;
+  letter-spacing: 0.8vw;
+  color: transparent;
+  -webkit-text-stroke: 1px $mc;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.t-latest {
+  margin-left: -12vw;
+}
+
+.t-event {
+  margin-left: -33.6vw;
+  top:-5vw;
+  background-color: white;
+}
+
+.t-about {
+  margin-left: -10.6vw;
+}
+
+.horizontal-text {
+  font-size: 2.3vw;
+  font-weight: $bold;
+  text-transform: uppercase;
+  letter-spacing: 0.8vw;
+  position: absolute;
+  left: 5vw;
+  top: 0;
+  color: $mc;
+  background-color: white;
+}
+
+::selection {
+  color: #000000;
+  text-shadow: none;
+}
+
+

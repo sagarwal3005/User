@@ -1,0 +1,95 @@
+.home-article {
+  @extend .d-flex;
+  position: relative;
+  z-index: 9;
+  padding-bottom: 1vw;
+  a {
+    color: inherit;
+  }
+  .m-color {
+    position: absolute;
+    top: -5vw;
+    bottom: 0;
+    display: flex;
+    z-index: 9;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &_cat {
+    padding-bottom: 1vw;
+    text-transform: uppercase;
+    font-size: 1vw;
+    letter-spacing: 5px;
+  }
+  &_title {
+    font-weight: $bold;
+    @extend .h4;
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 6vw;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &_content {
+    font-size: 1vw;
+    margin-top: 1.5vw;
+    line-height: 1.8;
+    overflow: hidden;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 5vw;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &_bg {
+    position: relative;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .btn-container {
+    overflow: hidden;
+  }
+  &:last-child(){
+    .m-color{
+      top:0;
+    }
+  }
+  &:nth-child(2){
+    .m-color{
+      top:-3vw;
+    }
+  }
+}
+
+.latest {
+  position: relative;
+  // margin-top:5vw;
+  .left {
+    left: 0;
+    padding-top: 4vw;
+  }
+  .right {
+    right:0;
+  
+  }
+  .f-btn{
+    margin-top: 2vw;
+  }
+}
+
+.article-link{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:7;
+}

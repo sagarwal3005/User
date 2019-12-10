@@ -1,0 +1,41 @@
+.up-event {
+  color: $mc;
+  position: relative;
+  margin-top:10vw;
+  padding-top: 5vw;
+  &:before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top:-15vw;
+    height: 15vw;
+    right: 0;
+    left: 0;
+    background-color: white;
+  }
+  .odd{
+    margin-top: 2vw;
+  }
+  .gallery-item{
+    height: 25vw;
+  }
+
+  .vertical-text{
+    position: absolute;
+  }
+
+  .parallax-outer{
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .h6{
+    font-size: 1.1vw;
+    padding-bottom: 0.5vw;
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+}
+.bg-img{
+  background-position: center;
+  background-size: cover;
+}

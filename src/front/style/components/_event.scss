@@ -1,0 +1,34 @@
+.event {
+  min-height: 50vw;
+  a{
+    color: $mc;
+  }
+  p{
+    padding: 0;
+  }
+  .des-container {
+    min-height: 13vw;
+    border: 3px solid $mc;
+    padding: 3vw 2vw 0 2vw;
+  }
+  .cost{
+    margin-top: -2.2rem;
+  }
+  .b-center{
+    left: 28vw;
+    top: 3vw;
+    width: 27%;
+    font-weight: $regular;
+  }
+  .map-container{
+    position: absolute;
+    right: 0;
+    top: 16vw;
+  }
+  .event-detail .pb-5{
+    padding-bottom: 0 !important;
+  }
+  .event-detail p.small{
+    margin-bottom: 1em;
+  }
+}

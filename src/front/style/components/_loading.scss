@@ -1,0 +1,113 @@
+body.loaded{
+  overflow-y: auto;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: 6;
+  cursor: wait;
+  will-change: height;
+  // background: #121212;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+  // transition-delay: 0.3s;
+  .loader {
+    overflow: hidden;
+    position: absolute;
+    background: #121212;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    z-index: 3;
+    // transition-delay: 20s;
+    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding: 0 8vw;
+      height: 100%;
+      // -webkit-transform: translateZ(0);
+      // transform: translateZ(0);
+    }
+  }
+
+  .image-loader {
+    position: absolute;
+    height: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    top:0;
+    overflow: hidden;
+    transform: scale(1.2);
+   
+    // transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    img {
+      position: absolute;
+      bottom: 0;
+      top:0;
+      width: 100%;
+      height: 100vh;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+      -webkit-transform: translateZ(0);
+      // transform: translateZ(0);
+      // transform: translate3d(0px, 0px, 0px);
+      animation-name: imageShow;
+      animation-duration: 2s;
+      // transform: translate3d(0px, 100vh, 0px);
+      transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+    }
+  }
+  &.loaded{
+    cursor: none;
+    .loader{
+      height: 0;
+      // transform: translate3d(0px, -100vh, 0px);
+    }
+    // .content{
+    //   top: 0px;
+    //   transform: translate3d(0px, -100vh, 0px);
+    // }
+    .image-loader{
+      transform: scale(1);
+      top: 0px;
+      height: 100%;
+      img{
+ 
+        top: 0px;
+        transform: translate3d(0px, -100vh, 0px);
+      }
+    }
+  }
+}
+.loader-wrapper.loaded{
+  z-index: -1;
+}
+@-webkit-keyframes imageShow {
+  0%   {  transform: translate3d(0px, 100vh, 0px);}
+  50%  {  transform: translate3d(0px, 0, 0px);}
+  100% {  transform: translate3d(0px, -100vh, 0px);}
+
+}
+
+// /* Standard syntax */
+// @keyframes example {
+//   from {background-color: red;}
+//   to {background-color: yellow;}
+// }
+
+
+
+
+
+

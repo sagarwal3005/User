@@ -1,0 +1,159 @@
+.gallery {
+  &-item {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    outline: 0;
+    max-width: 20vw;
+    &-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: -webkit-transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+        -webkit-transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      &-inner {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -moz-user-select: -moz-none;
+        display: flex;
+        overflow: hidden;
+        text-decoration: none;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        height: 100%;
+        cursor: pointer;
+        &:before {
+          content: "";
+          z-index: -1;
+          background: #121212;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          visibility: hidden;
+          transition: opacity 0.1s ease;
+        }
+
+        .image {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          -o-object-fit: cover;
+          object-fit: cover;
+          -o-object-position: center;
+          object-position: center;
+          transition: opacity 0.5s ease 0.1s,
+            -webkit-transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition: opacity 0.5s ease 0.1s,
+            transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition: opacity 0.5s ease 0.1s,
+            transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+            -webkit-transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &:hover {
+      .gallery-item-content {
+        webkit-transform: scale3d(0.95, 0.95, 1);
+        transform: scale3d(0.95, 0.95, 1);
+        .image {
+          -webkit-transform: scale3d(1.15, 1.15, 1);
+          transform: scale3d(1.15, 1.15, 1);
+          -webkit-transform: scale3d(1.15,1.15,1);
+          transform: scale3d(1.15,1.15,1);
+        }
+      }
+    }
+  }
+  .item-title{
+    text-align: right;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    height: 100%;    
+    text-transform: uppercase;
+    right: -2.25vw;
+    line-height: 1.875vw;
+    z-index: 3;
+    opacity: 1;
+    overflow: hidden;
+    transition: opacity .5s ease;
+    .content{
+      display: flex;
+      transition: opacity .5s ease,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955);
+      transition: transform .5s cubic-bezier(.455,.03,.515,.955),opacity .5s ease;
+      transition: transform .5s cubic-bezier(.455,.03,.515,.955),opacity .5s ease,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955);
+      h3{
+        font-size: .875vw;
+        letter-spacing: .125vw;
+      }
+      span{
+        font-size: .875vw;
+        line-height: 1;
+        letter-spacing: 0;
+        display: block;
+        margin-top: 1.25vw;
+        letter-spacing: .125vw;
+        font-weight: $regular;
+      }
+    }
+  }
+  .hover-title{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transform: translate3d(-1.75vw,0,0) skewX(10deg);
+    transform: translate3d(-1.75vw,0,0) skewX(10deg);
+    transition: opacity .4s ease,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955);
+    transition: transform .5s cubic-bezier(.455,.03,.515,.955),opacity .4s ease;
+    transition: transform .5s cubic-bezier(.455,.03,.515,.955),opacity .4s ease,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955);
+    h3{
+      font-size: .875vw;
+      line-height: 1;
+      letter-spacing: .125vw;
+    }
+    span{
+      margin-top: .5vw;
+      line-height: 1;
+      font-size: .875vw;
+      font-weight: $regular;
+    }
+  }
+  &-item{
+    &:hover{
+      .content {
+        -webkit-transform: translate3d(3.75vw,0,0) skewX(-10deg);
+        transform: translate3d(3.75vw,0,0) skewX(-10deg);
+        opacity: 0;
+      }
+      .hover-title{
+        -webkit-transform: translateZ(0) skewX(0);
+        transform: translateZ(0) skewX(0);
+        opacity: 1;
+      }
+    }
+  }
+}
